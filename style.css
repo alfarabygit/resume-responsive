@@ -1,0 +1,204 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+/* Color config */
+:root {
+  --baseColor: #f5f5f5;
+  --backgroundColor: #fff;
+  --fontColor: #1f1f1f;
+  --lineColor: #818181;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--baseColor);
+  width: 100%;
+  height: auto;
+  color: var(--fontColor);
+}
+
+h3 {
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: 2;
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.resume {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--backgroundColor);
+  padding: 2rem 1rem;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  animation: show 2s 0.4s;
+}
+
+.header-name {
+  letter-spacing: 2;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  text-align: center;
+  animation: show 2s 0.5s;
+}
+
+.header-job {
+  letter-spacing: 1;
+  padding-bottom: 0.5rem;
+  position: relative;
+  animation: show 2s 0.5s;
+}
+
+.header-contact {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  position: relative;
+  animation: show 2s 0.5s;
+}
+
+.divider {
+  margin: 1rem 2rem;
+  width: 90%;
+  border: 1px solid var(--lineColor);
+}
+
+.body-resume {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.left-resume {
+  padding: 0 1rem;
+  text-align: right;
+  border-right: 2px solid var(--lineColor);
+}
+
+.card-resume {
+  padding: 0.5rem 1rem;
+  position: relative;
+  animation: show 3s 1s;
+}
+
+.detail {
+  padding: 0.5rem 0;
+}
+.subdetail {
+  padding: 0.5rem 0;
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+.skills-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: #bdbcbc;
+  position: relative;
+}
+.skills-fill {
+  height: 10px;
+  background: var(--lineColor);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.adobe {
+  width: 70%;
+}
+.journey {
+  width: 80%;
+}
+.programming {
+  width: 60%;
+}
+.researching {
+  width: 85%;
+}
+.wireframing {
+  width: 50%;
+}
+
+.right-resume {
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.awards {
+  display: flex;
+  justify-content: space-between;
+}
+.hobbies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hobbies img {
+  width: 50px;
+  height: 50px;
+  margin: 5px 0;
+  padding: 5px;
+  object-fit: contain;
+  border: 1px solid #beb9b9;
+  border-radius: 10px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    top: -10px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/* media query */
+@media screen and (max-width: 650px) {
+  .left-resume {
+    text-align: left;
+    border-right: none;
+  }
+}
